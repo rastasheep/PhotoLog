@@ -1,0 +1,17 @@
+@import "base";
+@import "skeleton";
+
+.container{
+	@include container;
+	@include clearfix;
+}
+.sixteen{
+	@include columns(16);
+}
+
+.photo{
+	@include third(2);
+}
+.text{
+	@include third(1);
+}

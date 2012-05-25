@@ -1,0 +1,15 @@
+<div class="photo">
+	<article>
+		<% @album[:photos].sort_by! { |photo| photo[:time] }.each_with_index do |photo, i|%>
+			<h5><a href="<%= 'https://plus.google.com/photos/'+ @name +'/albums/'+ url +'/'+photo[:id]%>"> <%= photo[:title] %> </a></h5>
+			<img src='<%= PicasaAPI::url_for_dimension(photo[:src], "600") %>' alt=" <%= photo[:title] %>">
+		<% end %>
+	</article>
+</div>
+<div class="text">
+	<h3>Nano blog:</h3>
+	<p> <%= Twitter.search("from:lesa_ns #blog", :rpp => 20, :result_type => "recent").map! do |status|
+  	"#{status.text}"
+end %></p>
+</div>
+
