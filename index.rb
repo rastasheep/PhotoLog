@@ -15,11 +15,13 @@ end
 
 get '/' do
   @album = PicasaAPI::album(@name, @blog)
+  @title = "Pictures everywhere:"
   erb :index, :locals => {:url => @blog}
 end
 
 get '/portfolio' do
   @album = PicasaAPI::album(@name, @portfolio)
+  @title = "Portfolio:"
   erb :index, :locals => {:url => @portfolio}
 end
 

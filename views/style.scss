@@ -1,5 +1,6 @@
 @import "base";
 @import "skeleton";
+@import "lightbox";
 
 .container{
 	@include container;
@@ -9,9 +10,70 @@
 	@include columns(16);
 }
 
-.photo{
+.content{
 	@include third(2);
 }
-.text{
+.sidebar{
 	@include third(1);
+}
+article{
+	text-align: center;
+	padding-bottom:50px;
+	h5>a {
+		text-decoration:none;
+	}
+	img:hover{
+		opacity: 0.5;
+		-moz-opacity: 0.5;
+		filter:alpha(opacity=5);
+	}
+	img{	
+		-webkit-border-radius: 11px;
+		-moz-border-radius: 11px;
+		border-radius: 11px;
+		-webkit-box-shadow: 3px 4px 6px rgba(0,0,0,.3);
+		-moz-box-shadow: 3px 4px 6px rgba(0,0,0,.3);
+		box-shadow: 3px 4px 6px rgba(0,0,0,.3);
+	}
+}
+.social{
+	text-align: center;
+}
+@mixin social {
+	display: inline-block;
+	text-decoration: none;
+	width: 32px;
+	height: 32px;	
+}
+
+.twitter{
+	background-image: url(/images/twitter.png);
+	@include social;
+}
+.gplus{
+	background-image: url(/images/google.png);
+	@include social;
+}
+.facebook{
+	background-image: url(/images/facebook.png);
+	@include social;
+}
+.email{
+	background-image: url(/images/email.png);
+	@include social;
+}
+.rss{
+	background-image: url(/images/feed.png);
+	@include social;
+}
+.github{
+	background-image: url(/images/github.png);
+	@include social;
+}
+footer{
+	text-align: center;
+	opacity: 0.5;
+	-moz-opacity: 0.5;
+	filter:alpha(opacity=5);
+	padding-bottom:50px;
 }

@@ -8,7 +8,7 @@
 	<!-- Basic Page Needs
   ================================================== -->
 	<meta charset="utf-8">
-	<title>Your Page Title Here :)</title>
+	<title> <%= @title+"Aleksandar Diklic"%></title>
 	<meta name="description" content="">
 	<meta name="author" content="">
 
@@ -48,14 +48,25 @@
 		<hr />
 	</div>
 		<%= yield %>
+		<hr />
 	</div><!-- container -->
 
+	<footer>
+		<h5>Use of images:</h5>
+		<p>Images provided here are <a href="http://creativecommons.org/licenses/by-nc/3.0/">Creative Commons,Attribution-NonCommercial 3.0</a> <br>
+			Thanks so much for your understanding and support!</p>
+		<h5>For comercial use:</h5>
+		<p>Please contact me: rastasheep at gmail.com</p>
+		<h4>Feel free to use and share images :)</h4>
+		<a href="#">Back to top ^</a>
 
-
+	</footer>
 	<!-- JS
 	================================================== -->
 	<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
 	<script src="javascripts/tabs.js"></script>
+	<script src="javascripts/lightbox.js"></script>
+
 
 <!-- End Document
 ================================================== -->
