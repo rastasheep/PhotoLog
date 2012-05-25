@@ -1,5 +1,5 @@
 <div class="content">
-	<h3><a class="rss" href="http://feeds.feedburner.com/PhotoLog"></a> | <%= @title %></h3>
+	<h3><a class="rss" href="http://feeds.feedburner.com/PhotoLogFeed"></a> | <%= @title %></h3>
 		<% @album[:photos].sort_by! { |photo| photo[:time] }.each_with_index do |photo, i|%>
 		<article>
 			<h5><a href="<%= 'https://plus.google.com/photos/'+ @name +'/albums/'+ url +'/'+photo[:id]%>"> <%= photo[:title] %> </a></h5>

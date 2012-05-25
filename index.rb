@@ -25,6 +25,11 @@ get '/portfolio' do
   erb :index, :locals => {:url => @portfolio}
 end
 
+get '/about' do
+  @title = "About:"
+  erb :about
+end
+
 get '/style.css' do
   content_type 'text/css', :charset => 'utf-8'
   scss :style
