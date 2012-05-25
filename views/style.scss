@@ -47,27 +47,27 @@ article{
 }
 
 .twitter{
-	background-image: url(/images/twitter.png);
+	background: url('/images/social.png') no-repeat 0 0;
 	@include social;
 }
 .gplus{
-	background-image: url(/images/google.png);
+	background: url('/images/social.png') no-repeat -68px 0;
 	@include social;
 }
 .facebook{
-	background-image: url(/images/facebook.png);
+	background: url('/images/social.png') no-repeat -34px 0;
 	@include social;
 }
 .email{
-	background-image: url(/images/email.png);
+	background: url('/images/social.png') no-repeat -34px -33px;
 	@include social;
 }
 .rss{
-	background-image: url(/images/feed.png);
+	background: url('images/social.png') no-repeat 0 -33px;
 	@include social;
 }
 .github{
-	background-image: url(/images/github.png);
+	background: url('images/social.png') no-repeat -68px -33px;
 	@include social;
 }
 footer{
