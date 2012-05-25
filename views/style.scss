@@ -10,12 +10,6 @@
 	@include columns(16);
 }
 
-.content{
-	@include third(2);
-}
-.sidebar{
-	@include third(1);
-}
 article{
 	text-align: center;
 	padding-bottom:50px;

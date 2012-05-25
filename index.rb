@@ -1,6 +1,5 @@
 require 'rubygems'
 require 'sinatra'
-require 'twitter'
 require 'json'
 require 'net/http'
 require File.dirname(__FILE__) + '/lib/picasa'
