@@ -6,16 +6,15 @@
     <link><%= @homeurl%></link>
     <description>Photo blog by Aleksadar Diklic, enjoy and share photos.</description>
     <category>Photography</category>
-    <% @album[:photos].sort_by! { |photo| photo[:published] }.reverse.each_with_index do |photo|%>
+    <% @album[:photos].reverse.each_with_index do |photo, i|%>
       <item>
         <title><%= photo[:title] %></title>
         <link><%= @homeurl %></link>
         <description>
-          <a href="<%= @homeurl %>" rel="lightbox[blog]"><img src='<%= PicasaAPI::url_for_dimension(photo[:src], "600") %>' alt="<%= photo[:title] %>"></img></a>
+          <a href="<%= @homeurl %>"><img src='<%= PicasaAPI::url_for_dimension(photo[:src], "600") %>' alt="<%= photo[:title] %>"></img></a>
           Images provided here are Creative Commons,Attribution-NonCommercial 3.0 
           Thanks so much for your understanding and support!
         </description>
-        <pubDate><%= photo[:published].to_s %></pubDate>
       </item>
     <% end %>
   </channel>
