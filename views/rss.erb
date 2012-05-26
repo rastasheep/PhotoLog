@@ -10,7 +10,7 @@
         <title><a href="<%= @homeurl%>"> <%= photo[:title] %></a></title>
         <link><%= @homeurl %></link>
         <description>
-        <a href="<%= @homeurl %>" rel="lightbox[blog]"><img src='<%= PicasaAPI::url_for_dimension(photo[:src], "600") %>' alt=" <%= photo[:title] %>"></img</a>
+        <a href="<%= @homeurl %>" rel="lightbox[blog]"><img src='<%= PicasaAPI::url_for_dimension(photo[:src], "600") %>' alt=" <%= photo[:title] %>"></img></a>
         </description>
         <pubDate><%= photo[:published] %></pubDate>
       </item>
