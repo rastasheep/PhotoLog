@@ -5,6 +5,7 @@ require 'net/http'
 require './lib/picasa'
 
 before do
+  @homeurl = "http://photolog.heroku.com"
   @name = "109490003681682232613"
   @blog = "5746190409335238577"
   @portfolio = "5746190563675628609"
@@ -26,6 +27,12 @@ end
 get '/about' do
   @title = "About:"
   erb :about
+end
+
+get '/rss' do
+  @album = PicasaAPI::album(@name, @blog)
+  content_type 'application/rss+xml'
+  erb :rss, :layout => false
 end
 
 not_found do
