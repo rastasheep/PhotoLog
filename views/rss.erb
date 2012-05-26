@@ -1,5 +1,4 @@
-<?xml version="1.0"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/" version="2.0">
   <channel>
     <atom:link href="<%= @homeurl+'/rss'%>" rel="self" type="application/rss+xml" />
     <title>PhotoLog by Aleksadar Diklic</title>
@@ -10,11 +9,14 @@
       <item>
         <title><%= photo[:title] %></title>
         <link><%= @homeurl %></link>
-        <description>
-          Some text <a href="<%= @homeurl %>"><img src='<%= PicasaAPI::url_for_dimension(photo[:src], "600") %>' alt="<%= photo[:title] %>"></img></a>
-          <p>Images provided here are Creative Commons,Attribution-NonCommercial 3.0 
-            Thanks so much for your understanding and support!</p>
-        </description>
+        <guid isPermaLink="false"><%= @homeurl+'#'+photo[:title]%></guid>
+        <content:encoded>
+          <![CDATA[
+            Some text <a href="<%= @homeurl %>"><img src='<%= PicasaAPI::url_for_dimension(photo[:src], "600") %>' alt="<%= photo[:title] %>"></img></a>
+            <p>Images provided here are Creative Commons,Attribution-NonCommercial 3.0 
+              Thanks so much for your understanding and support!</p>
+          ]]>
+        </content:encoded>
       </item>
     <% end %>
   </channel>
