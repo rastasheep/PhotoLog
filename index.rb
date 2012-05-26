@@ -3,8 +3,6 @@ require 'sinatra'
 require 'json'
 require 'net/http'
 require './lib/picasa'
-require 'hassle'
-
 
 before do
   @name = "109490003681682232613"
