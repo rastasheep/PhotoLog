@@ -3,7 +3,7 @@ require 'sinatra'
 require 'json'
 require 'net/http'
 require './lib/picasa'
-require 'sass'
+require 'hassle'
 
 
 before do
@@ -28,10 +28,5 @@ end
 get '/about' do
   @title = "About:"
   erb :about
-end
-
-get '/style.css' do
-  content_type 'text/css', :charset => 'utf-8'
-  scss :style
 end
 
