@@ -3,6 +3,7 @@ require 'sinatra'
 require 'json'
 require 'net/http'
 require './lib/picasa'
+require 'sass'
 
 
 before do
