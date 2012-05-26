@@ -2,7 +2,7 @@ require 'rubygems'
 require 'sinatra'
 require 'json'
 require 'net/http'
-require '/lib/picasa'
+require File.dirname(__FILE__) + '/lib/picasa'
 
 
 before do
