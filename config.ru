@@ -1,3 +1,3 @@
-require "index.rb"
+require "./index.rb"
 
  run Sinatra::Application
