@@ -28,3 +28,7 @@ get '/about' do
   erb :about
 end
 
+not_found do
+  @title = "Not found:"
+  erb :"404"
+end
