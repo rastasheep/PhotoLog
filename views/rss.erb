@@ -12,7 +12,7 @@
         <guid isPermaLink="false"><%= @homeurl+'#'+photo[:title]%></guid>
         <content:encoded>
           <![CDATA[
-            <a href="<%= @homeurl %>"><img src='<%= PicasaAPI::url_for_dimension(photo[:src], "600") %>' alt="<%= photo[:title] %>"></img></a>
+            <a href="<%= @homeurl %>"><img src='<%= PicasaAPI::url_for_dimension(photo[:src], "600") %>' alt="<%= photo[:title] %>"></img></a><br>
             <p>Images provided here are Creative Commons,Attribution-NonCommercial 3.0 
               Thanks so much for your understanding and support!</p>
           ]]>
