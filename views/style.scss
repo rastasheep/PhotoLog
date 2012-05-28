@@ -9,6 +9,17 @@
 .sixteen{
 	@include columns(16);
 }
+.seven {
+	@include columns(7);
+}
+.nine {
+	@include columns(9);
+}
+.clear{
+	@include clear;
+}
+.alpha{@include alpha}
+.omega{@include omega}
 
 article{
 	text-align: center;
