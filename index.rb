@@ -18,7 +18,7 @@ get '/' do
   album = PicasaAPI::album(@name, @blog).assoc(:photos)
   album.flatten!.delete(:photos)
   album.reverse!
-  @album = album.paginate(:page => params[:page], :per_page => 10)
+  @album = album.paginate(:page => params[:page], :per_page => 5)
 
   @title = "Pictures everywhere:"
   erb :index, :locals => {:url => @blog}
