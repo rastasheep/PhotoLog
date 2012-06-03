@@ -1,3 +1,3 @@
 source :rubygems
 sinatra --version '>= 1.0'
-will_paginate --version '>= 3.0'
+gem 'will_paginate', '~> 3.0'
