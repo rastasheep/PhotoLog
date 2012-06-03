@@ -11,12 +11,12 @@
 .omega{@include omega}
 
 @mixin border-radius-shadow {
-		-webkit-border-radius: 11px;
-		-moz-border-radius: 11px;
-		border-radius: 11px;
-		-webkit-box-shadow: 3px 4px 6px rgba(0,0,0,.3);
-		-moz-box-shadow: 3px 4px 6px rgba(0,0,0,.3);
-		box-shadow: 3px 4px 6px rgba(0,0,0,.3);
+	-webkit-border-radius: 11px;
+	-moz-border-radius: 11px;
+	border-radius: 11px;
+	-webkit-box-shadow: 3px 4px 6px rgba(0,0,0,.3);
+	-moz-box-shadow: 3px 4px 6px rgba(0,0,0,.3);
+	box-shadow: 3px 4px 6px rgba(0,0,0,.3);
 }
 
 article{
@@ -38,11 +38,6 @@ article{
 	@extend .sixteen;
 	text-align: center; 
 	display: none;
-}
-#more{
-	@extend .sixteen;
-	text-align: center;
-	margin-bottom:50px;	
 }
 .social{
 	text-align: center;

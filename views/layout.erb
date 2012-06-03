@@ -71,17 +71,11 @@
       $("div#content").infinitescroll({
         navSelector  : "div.pagination",            
         nextSelector : ".next_page",   
-        itemSelector : "#photo",          
-        loadingImg   : "",    
-        loadingText  : "Loading more photos...",
-      });
-      $(window).unbind('.infscr');
-      $('a#more').click(function(){
-        $(document).trigger('retrieve.infscr');
-        return false;
-      });
-      $(document).ajaxError(function(e,xhr,opt){
-        if (xhr.status == 404) $('a#more').remove();
+        itemSelector : "#photo", 
+        loading: {         
+          img   : "",    
+          msgText  : "Loading more photos..."
+      }
       });
     });
   </script>
