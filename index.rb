@@ -25,7 +25,10 @@ get '/' do
 end
 
 get '/portfolio' do
-  @album = PicasaAPI::album(@name, @portfolio)
+  album = PicasaAPI::album(@name, @portfolio)
+  album.flatten!.delete(:photos)
+  album.reverse!
+  @album = album
   @title = "Portfolio:"
   erb :index, :locals => {:url => @portfolio}
 end
