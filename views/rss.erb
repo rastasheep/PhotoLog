@@ -7,7 +7,7 @@
     <category>Photography</category>
     <% @album[:photos].reverse.each_with_index do |photo, i|%>
       <item>
-        <title><%= photo[:title] %></title>
+        <title><%= photo[:title].chomp(".jpg") %></title>
         <link><%= @homeurl %></link>
         <guid isPermaLink="false"><%= @homeurl+'#'+photo[:title]%></guid>
         <content:encoded>
