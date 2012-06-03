@@ -40,11 +40,8 @@ article{
 	display: none;
 }
 #more{
-	@include border-radius-shadow;
 	@extend .sixteen;
 	text-align: center;
-	text-decoration:none;
-	border: 1px solid #333;
 	margin-bottom:50px;	
 }
 .social{

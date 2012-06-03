@@ -28,7 +28,7 @@ get '/portfolio' do
   album = PicasaAPI::album(@name, @portfolio).assoc(:photos)
   album.flatten!.delete(:photos)
   album.reverse!
-  @album = album
+  @album = album.paginate(:page => params[:page], :per_page => 10)
   @title = "Portfolio:"
   erb :index, :locals => {:url => @portfolio}
 end
