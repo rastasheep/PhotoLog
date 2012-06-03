@@ -4,67 +4,87 @@
 <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
 <head>
-	<meta charset="utf-8">
-	<title> <%= @title+"Aleksandar Diklic"%></title>
-	<meta name="description" content="">
-	<meta name="author" content="">
+  <meta charset="utf-8">
+  <title> <%= @title+"Aleksandar Diklic"%></title>
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-	<link rel="stylesheet" href="/style.css">
-	<link rel="alternate"  href="http://feeds.feedburner.com/PhotoLogFeed" type="application/rss+xml" title="FeedBurner RSS Feed"/>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="alternate"  href="http://feeds.feedburner.com/PhotoLogFeed" type="application/rss+xml" title="FeedBurner RSS Feed"/>
 
 
-	<!--[if lt IE 9]>
-		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
 
-	<link rel="shortcut icon" href="images/favicon.ico">
-	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  <link rel="shortcut icon" href="images/favicon.ico">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
 
 </head>
 <body>
-	<div class="container">
-	<div class="sixteen">
-		<h1 class="remove-bottom" style="margin-top: 40px">PhotoLog | Aleksandar Diklić</h1>
-		<h5><a href="/">home</a> | <a href="/portfolio">portfolio</a> | <a href="/about">about me</a></h5>
-		<div class="social">
-			<a class="twitter" href="http://twitter.com/lesa_ns"></a>
-			<a class="gplus" href="https://plus.google.com/u/0/109490003681682232613"></a> 
-			<a class="facebook" href="http://facebook.com/rastasheep"></a>
-			<a class="email" href="mailto:rastasheep@gmail.com"></a>
-			<a class="github" href="http://github.com/rastasheep"></a>
-			<a class="rss" href="http://feeds.feedburner.com/PhotoLogFeed"></a>
-		</div>
-	<hr>
-	</div>
-		<%= yield %>
-		<hr />
-	</div>
-	<footer>
-		<h5>Use of images:</h5>
-		<p>Images provided here are <a href="http://creativecommons.org/licenses/by-nc/3.0/">Creative Commons,Attribution-NonCommercial 3.0</a> <br>
-			Thanks so much for your understanding and support!</p>
-		<h5>For comercial use:</h5>
-		<p>Please contact me: rastasheep at gmail.com</p>
-		<h4>Feel free to use and share images :)</h4>
-		<a href="#">Back to top ^</a>
+  <div class="container">
+  <div class="sixteen">
+    <h1 class="remove-bottom" style="margin-top: 40px">PhotoLog | Aleksandar Diklić</h1>
+    <h5><a href="/">home</a> | <a href="/portfolio">portfolio</a> | <a href="/about">about me</a></h5>
+    <div class="social">
+      <a class="twitter" href="http://twitter.com/lesa_ns"></a>
+      <a class="gplus" href="https://plus.google.com/u/0/109490003681682232613"></a> 
+      <a class="facebook" href="http://facebook.com/rastasheep"></a>
+      <a class="email" href="mailto:rastasheep@gmail.com"></a>
+      <a class="github" href="http://github.com/rastasheep"></a>
+      <a class="rss" href="http://feeds.feedburner.com/PhotoLogFeed"></a>
+    </div>
+  <hr>
+  </div>
+    <%= yield %>
+    <hr />
+  </div>
+  <footer>
+    <h5>Use of images:</h5>
+    <p>Images provided here are <a href="http://creativecommons.org/licenses/by-nc/3.0/">Creative Commons,Attribution-NonCommercial 3.0</a> <br>
+      Thanks so much for your understanding and support!</p>
+    <h5>For comercial use:</h5>
+    <p>Please contact me: rastasheep at gmail.com</p>
+    <h4>Feel free to use and share images :)</h4>
+    <a href="#">Back to top ^</a>
 
-	</footer>
-	<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
-	<script src="javascripts/tabs.js"></script>
-	<script src="javascripts/lightbox.js"></script>
-	<script type="text/javascript">
-	  var _gaq = _gaq || [];
-	  _gaq.push(['_setAccount', 'UA-32159634-1']);
-	  _gaq.push(['_trackPageview']);
-	  (function() {
-	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-	  })();
-	</script>
+  </footer>
+  <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+  <script src="javascripts/lightbox.js"></script>
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-32159634-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+  <script type="text/javascript" src="javascripts/infinitescroll.min.js"></script>
+  <script type="text/javascript">
+    $(function(){
+      $("div#content").infinitescroll({
+        navSelector  : "div.pagination",            
+        nextSelector : ".next_page",   
+        itemSelector : "#photo",          
+        loadingImg   : "",    
+        loadingText  : "Loading more photos...",
+      });
+      $(window).unbind('.infscr');
+      $('a#more').click(function(){
+        $(document).trigger('retrieve.infscr');
+        return false;
+      });
+      $(document).ajaxError(function(e,xhr,opt){
+        if (xhr.status == 404) $('a#more').remove();
+      });
+    });
+  </script>
+
 </body>
 </html>

@@ -1,9 +1,11 @@
-<div class="sixteen">
+<div id="content" class="sixteen">
 	<h3><%= @title %></h3>
-	<% @album[:photos].reverse.each_with_index do |photo, i|%>
-		<article>
+	<% @album.each do |photo|%>
+		<article id="photo">
 			<h5><a href="<%= 'https://plus.google.com/photos/'+ @name +'/albums/'+ url +'/'+photo[:id]%>"> <%= photo[:title] %> </a></h5>
 			<a href="<%= PicasaAPI::url_for_dimension(photo[:src], "720") %>" rel="lightbox[blog]"><img src='<%= PicasaAPI::url_for_dimension(photo[:src], "600") %>' alt=" <%= photo[:title] %>"></a>
 		</article>
 	<% end %>
 </div>
+<a id="more" href="#"><h3>Load more photos</h3></a>
+<%= will_paginate @album %>

@@ -1,6 +1,8 @@
 require 'rubygems'
 require 'sinatra'
 require 'json'
+require 'will_paginate'
+require 'will_paginate/array'
 require 'net/http'
 require './lib/picasa'
 
@@ -13,7 +15,11 @@ before do
 end
 
 get '/' do
-  @album = PicasaAPI::album(@name, @blog)
+  album = PicasaAPI::album(@name, @blog).assoc(:photos)
+  album.flatten!.delete(:photos)
+  album.reverse!
+  @album = album.paginate(:page => params[:page], :per_page => 2)
+
   @title = "Pictures everywhere:"
   erb :index, :locals => {:url => @blog}
 end
