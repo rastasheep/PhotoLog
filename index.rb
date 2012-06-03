@@ -11,7 +11,6 @@ before do
   @name = "109490003681682232613"
   @blog = "5746190409335238577"
   @portfolio = "5746190563675628609"
-  @user = PicasaAPI::user(@name)
 end
 
 get '/' do
