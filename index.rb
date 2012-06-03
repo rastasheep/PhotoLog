@@ -25,7 +25,7 @@ get '/' do
 end
 
 get '/portfolio' do
-  album = PicasaAPI::album(@name, @portfolio)
+  album = PicasaAPI::album(@name, @portfolio).assoc(:photos)
   album.flatten!.delete(:photos)
   album.reverse!
   @album = album.paginate(:page => params[:page], :per_page => 5)
