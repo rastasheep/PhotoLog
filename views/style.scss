@@ -18,6 +18,9 @@
 	-moz-box-shadow: 3px 4px 6px rgba(0,0,0,.3);
 	box-shadow: 3px 4px 6px rgba(0,0,0,.3);
 }
+body{
+	background-image: url("/images/background.png");
+}
 
 article{
 	text-align: center;
@@ -82,4 +85,15 @@ footer{
 }
 .about{
 	text-align: justify;
+}
+
+hr{ 
+    height: 1px;
+    border:none;
+    background: #ddd;
+    width:100%;
+    background: -webkit-gradient(linear, 0 0,100% 0, from(rgba(50,50,50,0.01)),to(rgba(80,80,80,0.01)), color-stop(.5,#c9c9c9));
+    background: -moz-linear-gradient(left, rgba(0,0,0,0.001) 0%, rgba(201,201,201,1) 50%, rgba(0,0,0,0.001) 100%);
+    background:-o-linear-gradient(left, hsla(0,0%,0%,0) 0%, hsla(0,0%,0%,.75) 50%, hsla(0,0%,0%,0) 100%);
+    background:linear-gradient(left, hsla(0,0%,0%,0) 0%, hsla(0,0%,0%,.75) 50%, hsla(0,0%,0%,0) 100%);
 }
