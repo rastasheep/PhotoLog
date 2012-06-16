@@ -96,9 +96,9 @@
 /* #Links
 ================================================== */
 	a, a:visited { color: #333; text-decoration: underline; outline: 0; }
-	a:hover, a:focus { color: #000; }
+	a:hover { color: #000; }
 	p a, p a:visited { line-height: inherit; }
-
+	a:focus { outline: thin dotted; }
 
 /* #Lists
 ================================================== */
@@ -338,5 +338,13 @@
 	.remove-bottom { margin-bottom: 0 !important; }
 	.half-bottom { margin-bottom: 10px !important; }
 	.add-bottom { margin-bottom: 20px !important; }
+	::-moz-selection {
+	    background: #d60965;
+	    text-shadow: none;
+	}
 
+	::selection {
+	    background: #d60965;
+	    text-shadow: none;
+	}
 
