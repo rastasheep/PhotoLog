@@ -2,7 +2,7 @@
 	<% @album.each do |photo|%>
 		<article id="photo">
 			<h5><a href="<%= 'https://plus.google.com/photos/'+ @name +'/albums/'+ url +'/'+photo[:id]%>"> <%= photo[:title].chomp(".jpg")  %> </a></h5>
-			<a href="<%= PicasaAPI::url_for_dimension(photo[:src], "720") %>" rel="lightbox[blog]"><img src="<%= PicasaAPI::url_for_dimension(photo[:src], "720") %>" alt="<%= photo[:title].chomp(".jpg") %>"></a>
+			<a href="<%= PicasaAPI::url_for_dimension(photo[:src], "960") %>" rel="lightbox[blog]"><img src="<%= PicasaAPI::url_for_dimension(photo[:src], "720") %>" alt="<%= photo[:title].chomp(".jpg") %>"></a>
 		</article>
 	<% end %>
 </div>
