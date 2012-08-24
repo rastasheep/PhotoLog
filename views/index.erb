@@ -1,9 +1,8 @@
 <div id="content" class="sixteen">
-	<h3><%= @title %></h3>
 	<% @album.each do |photo|%>
 		<article id="photo">
 			<h5><a href="<%= 'https://plus.google.com/photos/'+ @name +'/albums/'+ url +'/'+photo[:id]%>"> <%= photo[:title].chomp(".jpg")  %> </a></h5>
-			<a href="<%= PicasaAPI::url_for_dimension(photo[:src], "720") %>" rel="lightbox[blog]"><img src="<%= PicasaAPI::url_for_dimension(photo[:src], "600") %>" alt="<%= photo[:title] %>"></a>
+			<a href="<%= PicasaAPI::url_for_dimension(photo[:src], "720") %>" rel="lightbox[blog]"><img src="<%= PicasaAPI::url_for_dimension(photo[:src], "600") %>" alt="<%= photo[:title].chomp(".jpg") %>"></a>
 		</article>
 	<% end %>
 </div>

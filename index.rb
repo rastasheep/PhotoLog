@@ -5,6 +5,17 @@ require 'will_paginate'
 require 'will_paginate/array'
 require 'net/http'
 require './lib/picasa'
+require 'sass/plugin/rack'
+
+use Sass::Plugin::Rack
+
+configure :production do
+  use Rack::Static,
+    urls: ['/stylesheets'],
+    root: File.expand_path('../tmp', __FILE__)
+  Sass::Plugin.options.merge!(template_location: 'public/stylesheets/sass',
+                              css_location: 'tmp/stylesheets')
+end
 
 before do
   @homeurl = "http://photolog.heroku.com"
@@ -19,7 +30,7 @@ get '/' do
   album.reverse!
   @album = album.paginate(:page => params[:page], :per_page => 5)
 
-  @title = "Pictures everywhere:"
+  @title = "Pictures everywhere | "
   erb :index, :locals => {:url => @blog}
 end
 
@@ -28,12 +39,12 @@ get '/portfolio' do
   album.flatten!.delete(:photos)
   album.reverse!
   @album = album.paginate(:page => params[:page], :per_page => 5)
-  @title = "Portfolio:"
+  @title = "Portfolio | "
   erb :index, :locals => {:url => @portfolio}
 end
 
 get '/about' do
-  @title = "About:"
+  @title = "About | "
   erb :about
 end
 
